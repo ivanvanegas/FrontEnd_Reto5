@@ -1,0 +1,46 @@
+NOTAS RETO 5
+
+Verificar IP con frontEnd:
+
+http://150.136.82.173:8080/front_reto5
+
+IP PUBLICA: 150.136.82.173
+
+ssh -i ssh-key-2021-11-01.key opc@150.136.82.173
+
+sudo yum install git
+sudo yum install java-11-openjdk-devel
+
+sudo yum-config-manager --add-repo http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo
+sudo yum-config-manager --enable epel-apache-maven
+sudo yum install -y apache-maven
+sudo alternatives --config java
+sudo alternatives --config javac
+
+git clone https://github.com/ivanvanegas/BackEnd_Reto5.git
+
+entrar carpeta
+mvn clean package -DskipTests
+entrar en target
+sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+sudo firewall-cmd --reload
+java -jar Reto5-0.0.1-SNAPSHOT.jar
+
+*********************************************
+
+instalacion de apache:
+
+sudo yum install -y httpd  
+sudo systemctl enable httpd
+sudo systemctl restart httpd
+sudo firewall-cmd --add-service=http --permanent
+sudo firewall-cmd --reload
+
+git bash:
+sudo yum install git
+cd /var/www/html
+
+Permisos carpeta www:
+
+sudo chmod 777 html
+

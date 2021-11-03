@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/gamestyle.css" rel="stylesheet" type="text/css">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <!-- javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Game.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Styles -->
+    <style>
+        body {
+            background-image: url("http://150.136.106.94/front_reto3/images/background3.gif");
+            background-position: 50% 50%;
+            background-repeat: repeat;
+        }
+    </style>
+
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+
+
+
+
+    <title>RETO 5</title>
+</head>
+
+<body><br>
+    <center>
+        <h1>
+            <p class="text-white"><a title="IvanSoft" href="index.html"><img src="images/home.png" alt="" width="7%"
+                        height="7%"></img></a>IVANSOFT SISTEMA DE GESTION DE JUEGOS</p>
+        </h1>
+        <a href="client.html" target="_self" <button type="button" class="btn btn-success">Clientes</button></a>
+        <a href="category.html" target="_self" <button type="button" class="btn btn-primary">Categorias</button></a>
+        <a href="game.html" target="_self" <button type="button" class="btn btn-warning">Registro de juegos</button></a>
+        <a href="reservation.html" target="_self" <button type="button"
+            class="btn btn-danger">Reservaciones</button></a>
+        <a href="message.html" target="_self" <button type="button" class="btn btn-dark">Mensajes</button></a>
+        <a href="report.html" target="_self" <button type="button" class="btn btn-light">Reportes</button></a><br>
+
+
+        <center><br>
+            <h3>
+                <p class="text-white">REGISTRO DE JUEGOS
+            </h3>
+            </p>
+
+            <div id="resultado1"></div>
+            <br>
+
+
+            <div>
+                <script type="text/javascript">
+                    window.onload = autoInicioCategoria();
+                </script>
+                <div id="miLista"></div><br>
+                <input type="text" id="name2" placeholder="Nombre del juego">
+                <input type="text" id="developer" placeholder="Desarrollador">
+                <input type="number" id="year" placeholder="año">
+                <input type="text" id="description2" placeholder="Descripcion">
+                <select id="select-category"></select>
+                <button onclick="agregar()" class="btn btn-warning" type="button">Guardar
+                    Juego</button>
+                <button onclick="traerInformacion()" class="btn btn-warning" type="button"> Consultar
+                    Juegos</button>
+                
+            </div>
+
+
+
+        </center>
+
+
+
+
+    </center>
+
+
+
+
+</body>
+
+</html>
